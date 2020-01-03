@@ -30,7 +30,7 @@ function myfunc(){
     else{      
         const tz = Date()
         console.log(tz);
-        var url = 'http://localhost:8080/api/addGoals'
+        var url = 'http://18.212.10.40:8080/api/addGoals'
         var request = new XMLHttpRequest();
         var parm = {
             email: document.getElementById("emailer").value,
