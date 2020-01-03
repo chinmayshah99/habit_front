@@ -50,8 +50,6 @@ function myfunc(){
             }
         };
         request.setRequestHeader("Content-type", "application/json");
-        request.setRequestHeader("Content-length", params.length);
-        request.setRequestHeader("Connection", "close");
         request.send(params);
     }
 }
