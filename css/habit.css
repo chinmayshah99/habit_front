@@ -1,63 +1,69 @@
-body {
-	background-color: #f1f1f1;
-	font-family: Helvetica,Arial,Verdana;
-
+* {
+	transition: 0.5s;
 }
-h1 {
-	color: green;
-	text-align: center;
-}
-.redfamily {
-	color: red;	
-}
-.search-box,.close-icon,.search-wrapper {
-	position: relative;
-	padding: 10px;
-}
-.search-wrapper {
-	width: 500px;
-	margin: auto;
-	margin-top: 50px;
-}
-.search-box {
-	width: 80%;
-	border: 1px solid #ccc;
-  outline: 0;
-  border-radius: 15px;
-}
-.search-box:focus {
-	box-shadow: 0 0 15px 5px #b0e0ee;
-	border: 2px solid #bebede;
-}
-.close-icon {
-	border:1px solid transparent;
-	background-color: transparent;
-	display: inline-block;
-	vertical-align: middle;
-  outline: 0;
-  cursor: pointer;
-}
-.close-icon:after {
-	content: "X";
+div, ul, li {
 	display: block;
-	width: 15px;
-	height: 15px;
-	position: absolute;
-	background-color: #FA9595;
-	z-index:1;
-	right: 35px;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-	padding: 2px;
-	border-radius: 50%;
-	text-align: center;
-	color: white;
-	font-weight: normal;
-	font-size: 12px;
-	box-shadow: 0 0 2px #E50F0F;
-	cursor: pointer;
 }
-.search-box:not(:valid) ~ .close-icon {
-	display: none;
+
+/*Bootstrap style modifications*/
+.container {
+	margin: 5% auto;
+}
+.fa {
+	font-size: 18px;
+	margin: 7px 0;
+}
+.fa-rotate-left, .fa-trash {
+	cursor: pointer;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+.fa-rotate-left:hover {
+	border: none;
+	color: skyblue;
+}
+.fa-trash:hover {
+	border: none;
+	color: red;
+}
+
+/*Todo list styles*/
+.todolist-title {
+	border-bottom: 1px solid #c70000;
+	padding-bottom: 10px;	
+}
+.todolist-item {
+	border: 1px solid #e2e2e2;
+	font-size: 18px;
+	height: 46px;
+	padding: 6px 12px;
+}
+	.todolist-item-checkbox {
+		background-color: #fff;
+		border: 1px solid #a1a1a1;
+		border-radius: 2px;
+		display: inline-block;
+		height:18px;
+		margin: 7px 0 7px;
+		vertical-align: middle;
+		width:18px;
+	}
+	.todolist-item-content {
+		vertical-align: middle;
+		margin-left: 4px;
+	}
+.todolist-completed-item {
+	border: 1px solid #e0e0e0;
+	color: #e2e2e2;
+	font-size: 18px;
+	height: 46px;
+	padding: 6px 12px;
+}
+	.todolist-completed-item .todolist-item-content {
+		text-decoration: line-through;
+	}
+.item-click-overlay {
+	cursor: pointer;
+	display: block;
+	width: 100%;
 }
