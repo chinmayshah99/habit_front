@@ -24,8 +24,10 @@ app.controller("todoListController", ['$scope', function($scope) {
 function myfunc(){
     console.log('hello, world')
     console.log(x)
-    if(document.getElementById("emailer").value === ''){
-
+    if(document.getElementById("emailer").value === '' || x.length === 0){
+        console.log('its here')
+        $('#todolister').css({'border': '3px solid #ff0000'});
+        // alert('press enter')
     }
     else{      
         const tz = Date()

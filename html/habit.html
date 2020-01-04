@@ -33,12 +33,13 @@
                         <button onclick="myfunc()"> Submit</button>
                     </div>
                 </form>
-                <form class="col-xs-12 form-horizontal list-add-item" ng-submit="addTodo(newItem)">
+                <p>Don't forget to press enter after entering your goal</p>
+                <form class="col-xs-12 form-horizontal list-add-item" ng-submit="addTodo(newItem)" id = 'todolister'>
                     <div class="form-group">
                         <input type="text" class="form-control input-lg" id="tdlist-new-item" ng-model="newItem" name="tdlist-new-item" placeholder="Type your new goal here and press enter" maxlength="30">
                     </div>
                 </form>
-                <ul class="list-group todolist">
+                <ul class="list-group todolist" >
                     <li class="list-group-item col-xs-12 todolist-item" ng-repeat="todo in todos track by $index">
                         <span class="todolist-item-content">{{ todo }}</span>
                     </li>
